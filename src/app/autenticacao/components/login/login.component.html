@@ -1,0 +1,24 @@
+<div class="p-5 h-100 d-flex">
+  <div class="dark-card">
+    <div class="w-100 d-flex pb-5">
+      <span class="logo mx-auto">
+        <img src="../../../../assets/images/icons/easy-insurance-logo.svg" alt="icon" width="45px" height="45px">&nbsp;Easy Insurance
+      </span>
+    </div>
+
+    <section>
+      <mat-form-field appearance="outline" class="w-100 pb-3">
+        <mat-label>E-mail</mat-label>
+        <input matInput [(ngModel)]="email" type="text">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="w-100 pb-3">
+        <mat-label>Senha</mat-label>
+        <input matInput [(ngModel)]="senha" type="password">
+      </mat-form-field>
+
+      <div class="w-100 text-center">
+        <button mat-stroked-button class="blue-button" (click)="doLogin()">Entrar</button>
+      </div>
+    </section>
+  </div>
+</div>

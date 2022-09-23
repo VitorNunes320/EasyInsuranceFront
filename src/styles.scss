@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+@import '/src/assets/styles/variables.scss';
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto,
+  "Helvetica Neue", sans-serif;
+  background: url("./assets/images/insurance-background.png") repeat center center;
+}
+
+.logo {
+  font-family: 'Iceberg';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: $color-light !important;
+}
+
+.light-link {
+  color: $color-light;
+}
+
+.mat-form-field-appearance-outline {
+  &.mat-focused {
+    .mat-form-field-outline-thick, .mat-form-field-label {
+      color: $color-light-blue !important;
+      border-radius: 6px;
+    }
+  }
+}
+
+.mat-input-element {
+  caret-color: $color-light-blue !important;
+}
+
+.card {
+  background-color: $color-dark-blue;
+  border: 4px solid $color-dark-card-border;
+  border-radius: 15px;
+}
+
+.page-title {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 175%;
+  color: $color-light;
+  margin: 0 !important;
+}
+
+table {
+  box-shadow: 0px 3px 6px rgba(96, 125, 139, 0.1);
+  background-color: #FFFFFF !important;
+
+  th {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px !important;
+    line-height: 15px !important;
+    color: $color-charcoal !important;
+    border-bottom: 1px solid $color-silver !important;
+    font-weight: bold !important;
+
+    .info {
+      font-size: 13px;
+    }
+
+    &.mat-header-cell {
+      padding: 20px;
+    }
+  }
+
+  td.mat-cell {
+    color: $color-charcoal !important;
+    padding: 16px 20px;
+    height: 75px;
+  }
+
+  border-collapse: collapse;
+  border-radius: 0.75rem;
+  border: 2px #000000 solid;
+  overflow: hidden;
+}
+
+hr {
+  color: $color-silver !important;
+  border-top: 2px $color-silver solid !important;
+}
+
+.dark-card {
+  background-color: $color-dark-blue;
+  padding: 30px;
+  margin: auto;
+  border: 4px solid $color-dark-card-border;
+  border-radius: 15px;
+  max-width: 500px;
+  height: 430px;
+}
+
+.light-button {
+  border: 2px $color-light solid;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.blue-button {
+  background-color: $color-light-blue !important;
+  color: $color-light;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.red-button {
+  background-color: $color-red !important;
+  color: $color-light;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.scroll-table {
+  width: 100%;
+  overflow: auto;
+
+  .mat-table {
+    min-width: 100%;
+    width: auto;
+    max-width: auto;
+
+    th, td {
+      white-space: normal;
+    }
+  }
+}
+
+.backdrop-blur {
+  z-index: 999;
+  backdrop-filter: blur(5px);
+}
+
+.mat-dialog-container {
+  background-color: $color-dark-blue !important;
+}

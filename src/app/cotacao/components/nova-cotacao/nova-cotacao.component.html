@@ -1,0 +1,45 @@
+<div class="row pb-4">
+  <div class="col">
+    <h1 class="page-title my-auto">
+      Nova Cotação
+    </h1>
+  </div>
+</div>
+
+<section>
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <mat-form-field class="w-100" appearance="outline" floatLabel="always">
+        <mat-label>Nome</mat-label>
+        <input [(ngModel)]="item.nome" matInput id="nome">
+      </mat-form-field>
+    </div>
+    <div class="col-12 col-lg-6">
+      <mat-form-field class="w-100" appearance="outline" floatLabel="always">
+        <mat-label>Tipo</mat-label>
+        <input [(ngModel)]="item.tipo" matInput id="tipo">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <mat-form-field class="w-100" appearance="outline" floatLabel="always">
+        <mat-label>Valor Estimado</mat-label>
+        <input [(ngModel)]="item.valorEstimado" matInput id="valorEstimado">
+      </mat-form-field>
+    </div>
+    <div class="col-12 col-lg-6">
+      <mat-form-field class="w-100" appearance="outline" floatLabel="always">
+        <mat-label>Data de Aquisição do Item</mat-label>
+        <input matInput [(ngModel)]="data" mask="d0/M0/0000" [dropSpecialCharacters] ="false" id="dataAquisicaoItem">
+      </mat-form-field>
+    </div>
+  </div>
+</section>
+
+<div class="col d-flex flex-row-reverse">
+  <button mat-raised-button class="blue-button cotacao-button" (click)="criarCotacao()">
+    Gerar Cotação
+  </button>
+</div>

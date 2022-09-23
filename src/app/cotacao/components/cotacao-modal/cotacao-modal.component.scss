@@ -1,0 +1,24 @@
+@import "/src/assets/styles/variables.scss";
+
+.dialog-title {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  color: $color-light;
+}
+
+.dialog-text {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-light;
+  max-width: 390px;
+}
+
+.green-button {
+  padding: 4px 35px !important;
+  height: fit-content !important;
+}

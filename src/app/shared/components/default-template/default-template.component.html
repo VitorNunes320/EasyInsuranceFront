@@ -1,0 +1,50 @@
+
+<header>
+  <mat-toolbar class="fixed-top">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="logo">
+        <img src="../../../../assets/images/icons/easy-insurance-logo.svg" alt="icon" width="45px" height="45px">&nbsp;Easy Insurance
+      </span>
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md>
+        <a routerLink="cotacoes" routerLinkActive="router-link-active" mat-button>Cotações</a>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          {{ storageService.getNome() }} <mat-icon>more_vert</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+
+<main class="h-100">
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>close</mat-icon>
+        </button>
+        <a routerLink="cotacoes" routerLinkActive="router-link-active" mat-button>Cotações</a>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          {{ storageService.getNome() }} <mat-icon>more_vert</mat-icon>
+        </button>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content">
+        <div class="card h-100 p-4">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</main>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="storageService.logout()">
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Sair</span>
+  </button>
+</mat-menu>
