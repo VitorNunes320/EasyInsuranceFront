@@ -15,4 +15,8 @@ export class AutenticacaoService {
   public doLogin(request: Login): Observable<ResponseBase> {
     return this.http.post<ResponseBase>(`${environment.baseURL}autenticacao/login`, request);
   }
+
+  public excluirUsuario(usuarioId: string) : Observable<ResponseBase> {
+    return this.http.delete<ResponseBase>(`${environment.baseURL}usuario/${usuarioId}`);
+  }
 }
